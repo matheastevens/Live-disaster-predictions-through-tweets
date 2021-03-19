@@ -20,7 +20,7 @@ Using popular NLP techniques, each tweets text is processed and passed through a
 
 
 ### Modeling:
-<img src="/assets/model_.jpeg" style="width: 200px; float: left;"/>
+<img src="/assets/model_.jpeg" style="width: 100px; float: left;"/>
 
 Our data was first passed into a pre-trained Word2Vec model in the embedding layer. It was then passed into a Bidirectional LSTM of 128 nodes, which was regularized using L2. To assure that the bias-variance tradeoff would be as low as possible, this was passed into a dropout layer. The data was then passed into a 16 node Dense layer before being output in a softmax layer for multiclass classification. The model was compiled with categorical crossentropy and adam optimization.
 
