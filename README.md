@@ -20,15 +20,16 @@ Using popular NLP techniques, each tweets text is processed and passed through a
 
 
 ### Modeling:
-<img src="/assets/model_.png"/>
 
 Our data was first passed into a pre-trained Word2Vec model in the embedding layer. It was then passed into a Bidirectional LSTM of 128 nodes, which was regularized using L2. To assure that the bias-variance tradeoff would be as low as possible, this was passed into a dropout layer. The data was then passed into a 16 node Dense layer before being output in a softmax layer for multiclass classification. The model was compiled with categorical crossentropy and adam optimization.
+<img src="/assets/model_.jpeg" style="width: 100px; float: left;"/>
 
 ### Scraping Twitter
 
 This is a low budget project and therefore only had access to Twitter's free API Tweepy, which has restrictions regarding number of tweets scraped, as well as adjacent information like followers, retweets and likes. To enhance our scraped data, we also used snscrape which scrapes the front-end of twitter on hashtages anda accounts. To ensure we were scraping somewhat relevant tweets, we compiled a list of top 100 accounts that are related to news outbreaks and disasters, such as @DisasterMedics, @RedCross and @FEMA. 
 
-To ensure we were also accessing grassroots-level tweets, we also leveraged our robust, pretrained Word2Vec model for relevant keywords. For each of the disaster labels we are searching for, we selected the top 15 most similar unique words using the w2v.most_similar functionality. These keywords were then used to perform hashtag scraping.
+To ensure we were also accessing grassroots-level tweets, we also leveraged our robust, pretrained Word2Vec model for relevant keywords. For each of the disaster labels we are searching for, we selected the top 15 most similar unique words using the w2v.most_similar functionality. These keywords were then used to perform hashtag scraping. <img src="/assets/Keyword hashtages.png" style="width: 100px; float: left;"/>
+
 
 The number of tweets scraped at any time varies depending on how many top accounts the user wishes to include, as well as however many tweets contain our predefined keywords. 
 
