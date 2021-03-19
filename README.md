@@ -24,7 +24,7 @@ Using popular NLP techniques, each tweets text is processed and passed through a
 Our data was first passed into a pre-trained Word2Vec model in the embedding layer. It was then passed into a Bidirectional LSTM of 128 nodes, which was regularized using L2. To assure that the bias-variance tradeoff would be as low as possible, this was passed into a dropout layer. The data was then passed into a 16 node Dense layer before being output in a softmax layer for multiclass classification. The model was compiled with categorical crossentropy and adam optimization.
 <img src="/assets/model_.jpeg" style="width: 100px; float: left;"/>
 
-### Scraping Twitter <img src="/assets/Keyword_hashtags.png" style="width: 100px; float: right;"/>
+### Scraping Twitter                                        <img src="/assets/Keyword_hashtags.png" style="width: 100px; float: right;"/>
 
 This is a low budget project and therefore only had access to Twitter's free API Tweepy, which has restrictions regarding number of tweets scraped, as well as adjacent information like followers, retweets and likes. To enhance our scraped data, we also used snscrape which scrapes the front-end of twitter on hashtages anda accounts. To ensure we were scraping somewhat relevant tweets, we compiled a list of top 100 accounts that are related to news outbreaks and disasters, such as @DisasterMedics, @RedCross and @FEMA. 
 
