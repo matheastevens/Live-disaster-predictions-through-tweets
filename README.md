@@ -28,7 +28,7 @@ Our data was first passed into a pre-trained Word2Vec model in the embedding lay
 
 This is a low budget project and therefore only had access to Twitter's free API Tweepy, which has restrictions regarding number of tweets scraped, as well as adjacent information like followers, retweets and likes. To enhance our scraped data, we also used snscrape which scrapes the front-end of twitter on hashtages anda accounts. To ensure we were scraping somewhat relevant tweets, we compiled a list of top 100 accounts that are related to news outbreaks and disasters, such as @DisasterMedics, @RedCross and @FEMA. 
 
-To ensure we were also accessing grassroots-level tweets, we also leveraged our robust, pretrained Word2Vec model for relevant keywords. For each of the disaster labels we are searching for, we selected the top 15 most similar unique words using the w2v.most_similar functionality. These keywords were then used to perform hashtag scraping. <img src="/assets/Keyword_hashtags.png" style="width: 100px; float: left;"/>
+To ensure we were also accessing grassroots-level tweets, we also leveraged our robust, pretrained Word2Vec model for relevant keywords. For each of the disaster labels we are searching for,<img src="/assets/Keyword_hashtags.png" style="width: 100px; float: left;"/> we selected the top 15 most similar unique words using the w2v.most_similar functionality. These keywords were then used to perform hashtag scraping. 
 
 
 The number of tweets scraped at any time varies depending on how many top accounts the user wishes to include, as well as however many tweets contain our predefined keywords. 
@@ -45,7 +45,7 @@ From there, the count of disaster-related tweets, and their locations are aggreg
 
 Using the Google Maps API free-trial, the locations of disaster mentions can be plotted on an interactive Google map. In a productionized environment with a paid version of the Google maps API, the map would be updated in real time as well. 
 
-![Screenshot](assets/map.png)
+<img src="/assets/Google_maps.png"/>
 
 
 
