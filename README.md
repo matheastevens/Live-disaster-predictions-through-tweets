@@ -43,9 +43,11 @@ From there, the count of disaster-related tweets, and their locations are aggreg
 
 ### Mapping
 
-Using the Google Maps API free-trial, the locations of disaster mentions can be plotted on an interactive Google map. In a productionized environment with a paid version of the Google maps API, the map would be updated in real time as well. 
+Using the Google Maps API free-trial, the locations of disaster mentions can be plotted on an interactive Google map. In a productionized environment with a paid version of the Google maps API, the map would be updated in real time as well. Below is a screenshow of a sample output with all tweet locations shown. The productionized version would open in a web browser ans only show the locations for tweets tagged as disaster related. 
+
 
 <img src="/assets/Google_maps.png"/>
 
 
 
+For more information about this project, do not hesitate to get in touch. 
